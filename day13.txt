@@ -1,0 +1,91 @@
+Day13
+
+1. 웹 크롤링 준비
+(1) Chrome 브라우저
+(2) 개념
+    모듈 : 파일
+    패키지 : 파일 + 디렉토리
+    라이브러리 : 여러 개의 패키지
+(3) 파이썬에서 기본으로 제공하지 않는 라이브러리 설치하기
+    pip install 라이브러리명
+    - 라이브러리를 자동으로 설치
+    - 필요한 다른 라이브러리도 자동으로 설치
+    - 최소버전 조건, 호환되는 최신 버전으로 설치
+
+    pip install 라이브러리파일명 --timeouts 1
+(4) requests 라이브러리 설치하기
+    - 웹사이트에 요청을 쉽게 처리하는 라이브러리리
+(5) BeautifulSoup4 패키지 설치하기(JSoup in Java)
+    - 구문을 해석해서 필요한 내용만 추출하는 패키지
+    - 이상한 나라의 앨리스에서 모조 거북이가 부르는 노래
+      Dinner Soup, Beautiful Soup
+
+2. 웹 크롤링의 이해
+(1) 웹 크롤링(Web Crawling)
+    크롤(Crawl) : '기어다니다'라는 뜻
+    웹크롤러(최초의 검색엔진), 웹스파이더 - 웹사이트 정보를 수집하는 봇
+    크롤러가 하는 일을 '크롤링'이라고 부름
+    웹 스크래핑(Scraping) 이라고도 함
+(2) HTML(HyperText Markup Language)
+    웹페이지를 구성하는 언어
+    웹사이트에서 우측 버튼 클릭 후 (페이지)소스보기
+    < > 를 Tag라고 부름   ******* CSS Selector
+
+    크롤링의 정의 : URL로부터 HTML을 가져와서 필요한 데이터를 찾는 것
+(3) requests로 웹 페이지 가져오기
+    import requests
+    url = 'http://www.naver.com'
+    response = requests.get(url)
+
+    # 파라미터(인자값)이 있을 때
+    url = 'https://search.naver.com/search.naver'
+    param = {'query':'movie'}
+    response = requests.get(url, params=param)
+
+    response.status_code : 상태코드(1xx:진행중, 2xx:완료,
+                                  3xx:완료인데 페이지이동,
+                                  4xx:사용자 잘못,
+                                  5xx:서버 잘못)
+    response.text : 웹페이지 소스(우리 눈에 보기 쉬운 형태)
+    response.encoding : 언어 설정
+
+3. BeautifulSoup4
+   가져온 데이터에서 원하는 데이터를 수집
+   CSS Selector의 문법을 준수함
+
+   (1) 기본 사용법
+   import requests         cf) selenium : 동적 페이지 특화
+   from bs4 import BeautifulSoup   # BeautifulSoup는 클래스
+
+   url = 'url주소'
+   response = requests.get(url)
+   html = response.text
+   soup = BeautifulSoup(html, 'html.parser')
+
+   (2) 메서드
+   find('tagname') : 태그(< >) 중에서 태그명이 tagname인 첫 번째 것
+   find('tagname').text : 위의 묶음 중 내용만
+   find('tagname').get('property') : 태그의 속성 중 속성명이 property인 것
+
+   find_all('tagname') : 태그 중에서 태그명이 tagname인 것들의 리스트
+    ex) 두 번째 것만 선택하려면, find_all('tagname')[1].text
+
+   find, find_all('p', class_='artist')         <p class="artist">
+   find, find_all('p', id='id명')               <p id="id명">
+
+   cf) select
+       p.artist : <p> 태그의 artist class를 갖는 묶음
+       p#skipNav : <p> 태그의 skipNav ID를 갖는 묶음
+       p artist : <div class="artist> (자식들 중에서)
+            <p class="artist"><div><div class="artist> ...
+
+
+
+
+
+
+
+
+
+
+
