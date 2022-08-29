@@ -1,3 +1,4 @@
 # python_review
-Progress of learning Python as a beginner
+In progress of learning Python...
+
 File comments include Korean.
