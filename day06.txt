@@ -1,0 +1,72 @@
+Day06
+
+1. Function (함수)
+   f(x) = y
+   Built-in Functions, User (Defined) Functions, Internal Functions
+
+2. Built-in Functions
+   - 파이썬을 설치하면 자동으로 제공하는 함수
+   - import 필요없음
+
+(1) eval(문자열)
+    문자열을 입력받아 문자열을 파이썬에게 던진 결과값을 돌려주는 함수
+    eval('1+1') => 2
+
+(2) format(값, 포맷)
+    str.format과는 다른 함수
+    값을 포맷에 맞추어 편집한 문자열을 돌려주는 함수
+    format(34567, ',') => 34,567
+
+(3) str(), float(), int() : 데이터 타입 변경 (Casting 함수)
+    str() : 문자열로 변환, 문자열에 숫자를 더해서 문자열을 만들 때 주로 사용
+    float() : 실수로 변환, (주로 화면에서) 입력받은 숫자는 숫자로 보여도 문자열이기 때문에 연산을 위해서는 변환 필요
+    int(): float()와 동일 (정수)
+
+(4) divmod(나누어지는 수, 나눌 수)
+    몫과 나머지를 한꺼번에 구하는 함수
+    divmod(10, 3) => (3, 1) Tuple
+
+(5) min(), max()
+    입력받은 값 중 최소값, 최대값을 구해주는 함수
+    cf) 문자일 때 크기 순 : 0~9(0x30) < A~Z(0x41) < a~z(0x61)
+
+(6) abs(), pow(), sum()
+    abs() : 절대값을 구하는 함수. 오차 범위 구할 때 많이 사용
+    pow() : 제곱을 구하는 함수. pow(3, 2) = 9
+    sum() : 집합의 합계를 구하는 함수. sum(10), sum(1, 2), sum(1, 2, 3, 4, 5) => ERROR
+            sum([1, 2, 3, 4, 5], 초기값)
+
+(7) round()
+    반올림 결과를 구해주는 함수
+    round(234.2428) = 234
+    round(234.2428, 1) = 234.2
+    round(234.2428, 3) = 234.253
+    round(234.2428, -1) = 230
+    round(234.2428, -3) = 0
+
+(8) print()
+    화면에 출력한다.
+    print('a', 'b', sep='-----') => a-----b
+
+(9) input()
+    화면으로부터 입력을 받는다.
+    두 개 이상의 입력을 받을 때는 split() 사용
+    a, b = input('두개넣어주세요').split(" ")
+
+(10) len()
+     집합변수의 요소 (element) 개수를 반환, 문자열의 경우는 문자 개수
+     len("abcde") = 5
+     len(["abcde"]) = 1
+     len([1, 2, 3, 4, 5]) = 5
+
+(11) range()
+     전달된 인수값에 따라 순차적인 데이터를 생성하여 반환
+     range(stop) : 0부터 stop-1까지
+     range(start, stop) : start부터 stop-1까지
+     range(start, stop, step) : start부터 stop-1까지 step 간격으로
+
+(12) sorted()
+     정렬한다 (오름차순, 내림차순)
+
+(13) enumerate(), zip()   # 인터넷 search해서 무슨 함수인지 예습하기!!!
+     => 다음 시간까지 뭔지 알아보기
