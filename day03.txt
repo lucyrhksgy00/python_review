@@ -1,0 +1,70 @@
+Day 03
+
+1. 연산자 (Operator)
+    산술연산자, 비교연산자, 논리연산자, 삼항연산자
+(1) 산술연산자
+    + : 문자열 + 문자열 = 문자열이 연결 # 문자열과 숫자는 더할 수 없음; 숫자를 문자열로 변환 (str)
+    - : 뺄셈
+    * : 문자열 * 숫자 = 문자열이 숫자만큼 반복
+    / : 나눗셈, int / int -> float, 숫자 / 0 -> 오류
+        (ex) 3 / 5 = 0.6
+    // : 몫
+        (ex) 10 // 3 = 3
+    % : 나머지 (modulo, mod, 모듈러스)
+        (ex) 10 % 3 = 1
+    ** : 파워 (제곱) 연산자
+        (ex) 5 ** 3 = 125
+        (ex) 5 ** 1.25
+        pow(5, 3) = 125
+
+(2) 비교연산자 (Comparator) - 관계연산자
+    True or False
+    a > b : a가 b보다 크면 True
+    a == b : a와 b가 같은가?
+    a != b: a와 b가 다른가?
+
+(3) 논리연산자
+    A and B : 그리고, A와 B가 모두 True이면 True
+    A or B : 또는, A와 B중 하나만 True이면 True
+    A ^ B : A와 B가 결과가 다르면 True; XOR (Exclusive OR)
+    not A : A의 반대
+
+2. str.format()
+    String (문자열)의 기능으로 {}를 사용하여 변수 입력 가능
+    print('변수 A의 값은 ', A, ' 변수 B의 값은 ', B)
+    print('변수 A의 값은 {} 변수 B의 값은 {}'.format(A, B))
+
+3. Python Reference 메뉴얼 사이트
+    1) www.python.org
+    2) docs 클릭
+    3) 필요시 좌측 상단을 korean으로 변경
+    4) str.format 찾기
+    5) Syntax, Example
+
+4. 제어문 (Control Statement)
+    - 프로그램 언어에서 실행 순서를 변경하거나,
+      조건에 따라서 실행해야 할 명령문을 제어하기 위한 구문
+    - 일반적으로 프로그램은 위에서 아래로 수행
+      특정 조건에서만, 특정 부분만 반복할 경우 등에 필요
+    - 제어문의 종류
+      조건문, 반복문, 기타 제어문
+      조건문 : if, elif, 삼항조건문
+      반복문 : while, for
+      기타 제어문 : break, continue
+
+(1) 조건문 (Condition Statement)
+    - "조건에 따라 다른 것"을 구현하는 문장
+    - 조건에 따라 해야할 일이 다를 때 사용
+    - if, if-else, if-elif, if-elif-else
+    1) if
+       if 조건:
+          조건이 True일 때 해야할 문장
+    2) if-elif-else
+       if 조건1:
+          조건1의 결과가 True일 때 실행할 문장
+       elif 조건2:
+          조건1은 False, 조건2가 True일 때 실행할 문장
+       elif 조건3:
+          조건1, 조건2가 False, 조건3이 True일 때 실행할 문장
+       else:
+          모든 조건이 False일 때 실행할 문장
