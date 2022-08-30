@@ -1,4 +1,4 @@
 # python_review
 In the process of learning Python...
 
-File comments include Korean.
+File comments are in Korean.
