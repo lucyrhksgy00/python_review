@@ -1,0 +1,48 @@
+Day18
+
+1. Pandas
+(1) Numpy와 Pandas는 고급 데이터 분석, 수치 계산에 사용되는 모듈
+(2) Numpy : 같은 종류의 데이터만 처리 가능
+    Pandas : 데이터 타입이 다양해도 가능
+(3) csv, excel 등의 데이터를 읽고 원하는 데이터로 변환 가능
+(4) Numpy와 마찬가지로 C로 개발되어 빠르다.
+(5) 별도 설치가 필요
+
+2. Series
+   1차원 데이터
+   형식 : pd.Series(data, index=인덱스리스트)
+   import pandas as pd
+   # 1. 스칼라 데이터
+   # 2. 일차원 배열
+   # 3. 리스트 데이터
+   # 4. 딕셔너리 데이터
+   # 5. range 데이터
+
+3. data_range
+   날짜 데이터이며, 연속적인 날짜를 자동으로 생성
+   형식 : pd.date_range(start, end, periods, freq)
+         start(필수) : 시작일시
+         end : 종료일시
+         periods : 데이터 생성 기간
+         freq : 입력하지 않으면 D(일)
+
+4. DataFrame
+(1) Pandas에서 사용하는 가장 기본이 되는 데이터 형태
+(2) DataFrame을 정의할 때 2차원 리스트 매개변수를 사용
+    형식 : pd.DataFrame(data, [index=index_data, column=column_data])
+
+5. Key
+   1차원 리스트가 들어있는 딕셔너리 데이터가 있을 때
+   Key로 원하는 데이터를 찾을 수 있다.
+
+6. Slice
+   데이터를 원하는 대로 나눌 수 있다.
+
+7. Filter
+   데이터를 특정 조건인 것만 거를 수 있다.
+
+8. Sort
+   데이터를 원하는 대로 정렬할 수 있다.
+
+9. Rot
+   데이터의 행과 열을 바꾼다.
