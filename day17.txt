@@ -1,0 +1,30 @@
+Day17
+
+(7) unique - 유일값
+    행렬에서 유일한 값, 유일한 값 개수를 확인할 수 있음
+    중복된 데이터가 제거된 벡터로 변환 후 각 개수를 출력
+
+(8) concatenate - 합치기
+    가로 결합 : 행의 수가 같아야 함 (1, 두 행렬을 합치는 경첩이라고 생각)
+    세로 결합 : 열의 수가 같아야 함 (0)
+
+(9) split - 자르기
+
+(10) sort - 정렬하기
+     가로 sort, 세로 sort
+
+2. NUMPY 연산
+(1) basic
+(2) compare
+(3) filter
+(4) broadcasting
+(5) functions
+    min : 최소값
+    max : 최대값
+    argmin : 최소값의 인덱스
+    argmax : 최대값의 인덱스
+    sum : 합계
+    mean : 평균
+    median : 중간값
+    var : 분산, variance
+    std : 표준편차, standard deviation
